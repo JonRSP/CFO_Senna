@@ -1,0 +1,131 @@
+\chapter{ANÁLISE DE RESULTADOS}
+
+\section{\acrshort{FMS}}
+
+Em relação aos dados obtidos nos testes análise estatística dos dados obtidos nos testes do \acrlong{FMS} realizados sob diferentes condições de fardamento. Foram aplicados testes estatísticos não paramétricos adequados para amostras pequenas e dados discretos, como o \textbf{teste de Friedman} e o \textbf{teste de Wilcoxon}, para identificar diferenças significativas entre as condições.
+
+\subsection{Teste de Friedman}
+O teste de Friedman é um teste estatístico não paramétrico utilizado para comparar três ou mais condições de medidas repetidas \cite{sheldon1996use}. Ele verifica se há diferenças estatisticamente significativas entre os fardamentos em relação ao desempenho nos testes de FMS.
+
+A hipótese testada é:
+\begin{itemize}
+    \item $H_0$: Não há diferenças entre os fardamentos.
+    \item $H_1$: Pelo menos um fardamento apresenta diferenças estatisticamente significativas.
+\end{itemize}
+
+A Tabela \ref{tab:friedman} apresenta os valores da estatística do teste de Friedman ($\chi^2_F$) e os respectivos \textit{p-valores}.
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados do Teste de Friedman para os Movimentos do FMS}
+    \label{tab:friedman}
+    \begin{tabular}{lcc}
+        \hline
+        \textbf{Movimento} & \textbf{Estatística ($\chi^2_F$)} & \textbf{$p$-valor} \\
+        \hline
+        Active Straight Leg Raise Direito  & 10.317 & 0.016  \\
+        Active Straight Leg Raise Esquerdo &  8.032 & 0.045  \\
+        Deep Squat                        &  4.000 & 0.261  \\
+        Hurdle Step Direito               & 13.047 & 0.004  \\
+        Hurdle Step Esquerdo              &  9.621 & 0.022  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Os resultados indicam que há diferenças estatisticamente significativas ($p < 0.05$) para os seguintes testes: \textbf{Active Straight Leg Raise Direito e Esquerdo}, \textbf{Hurdle Step Direito e Esquerdo}. Já os outros testes não apresentaram diferenças significativas entre os fardamentos.
+
+\subsection{Teste de Wilcoxon para Comparações Pareadas}
+Para determinar quais fardamentos diferem entre si, foi aplicado o teste de Wilcoxon para comparações pareadas entre os fardamentos. Este teste verifica diferenças entre duas condições específicas, sendo uma alternativa ao teste \textit{t de Student} pareado quando os dados não seguem distribuição normal \cite{hilton1996appropriateness}.
+
+A Tabela \ref{tab:wilcoxon} apresenta os resultados para os movimentos que mostraram diferenças significativas no teste de Friedman.
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados do Teste de Wilcoxon para Comparação entre Fardamentos}
+    \label{tab:wilcoxon}
+    \begin{tabular}{lcc}
+        \hline
+        \textbf{Comparação} & \textbf{Estatística ($W$)} & \textbf{$p$-valor} \\
+        \hline
+        Active Straight Leg Raise Direito (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
+        Active Straight Leg Raise Direito (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
+        Active Straight Leg Raise Direito (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Active Straight Leg Raise Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+        Active Straight Leg Raise Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+        Active Straight Leg Raise Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+        Active Straight Leg Raise Esquerdo (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
+        Active Straight Leg Raise Esquerdo (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
+        Active Straight Leg Raise Esquerdo (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Active Straight Leg Raise Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+        Active Straight Leg Raise Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+        Active Straight Leg Raise Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+        Hurdle Step Direito (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
+        Hurdle Step Direito (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
+        Hurdle Step Direito (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Hurdle Step Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+        Hurdle Step Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+        Hurdle Step Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+        Hurdle Step Esquerdo (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
+        Hurdle Step Esquerdo (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
+        Hurdle Step Esquerdo (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Hurdle Step Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+        Hurdle Step Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+        Hurdle Step Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Os resultados do teste de Wilcoxon mostram que o fardamento \acrlong{MM} impactou negativamente o desempenho no movimento Active Straight Leg Raise, pois apresentou diferenças significativas em relação à linha de base ($p = 0.00086$) e ao fardamento 5ºA ($p = 0.00006$). O fardamento \acrlong{MML} também influenciou esse movimento, mas com menor impacto ($p = 0.04772$).
+
+\subsection{Conclusões}
+Os testes estatísticos indicam que os fardamentos afetam significativamente o desempenho em alguns movimentos do \acrshort{FMS}, especialmente no Active Straight Leg Raise e no Hurdle Step. O fardamento \acrlong{MM} demonstrou maior impacto negativo, enquanto o uniforme 5ºA apresentou desempenho semelhante à linha de base.
+
+\tab Os resultados reforçam a importância de considerar a mobilidade e flexibilidade. É possível perceber que os impactos negativos foram relacionados principalmente à mobilidade de membros inferiores.
+
+\section{Dados de Temperatura}
+
+
+A escrever
+
+
+
+\section{Formulário de Percepção Subjetiva}
+A análise do formulário de percepção subjetiva tem como objetivo compreender as percepções dos participantes sobre o uso dos fardamentos avaliados. 
+
+
+    \subsection{Análise Quantitativa:}
+    \begin{itemize}
+    \item A questão sobre a percepção do incômodo gerado pelo fardamento foi analisadas por meio de estatísticas descritivas, como médias e distribuições percentuais contidas na Tabela \ref{tab:analise_fardamento}.
+    \begin{table}[H]
+\centering
+\caption{Análise Quantitativa do Grau de Incômodo por Fardamento}
+\label{tab:analise_fardamento}
+\footnotesize
+\begin{tabular}{lrrrrrrrr}
+\toprule
+{} &     Média &  Moda &  Desvio Padrão &  Mínimo &  1º Quartil &  Mediana &  3º Quartil &  Máximo \\
+Fardamento       &           &       &                &         &             &          &             &         \\
+\midrule
+5º A             &  1.888889 &     2 &       0.927961 &     1.0 &         1.0 &      2.0 &        2.00 &     4.0 \\
+MultiMissão      &  2.125000 &     2 &       0.640870 &     1.0 &         2.0 &      2.0 &        2.25 &     3.0 \\
+MultiMissão Leve &  1.375000 &     1 &       0.517549 &     1.0 &         1.0 &      1.0 &        2.00 &     2.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+    
+       \item Sobre a questão que trata dos pontos de desconforto, foram construídos os gráficos da Figura \ref{fig:desconforto} % da Figura \ref{fig:pontosGeral} 
+       e da \ref{fig:pontosFardamento} para verificar visualmente os pontos que mais incomodam os usuários.
+\end{itemize}
+       \figura{scale=0.5}{grafico_desconforto.png}{Pontos de desconforto indicados por fardamento}{fig:desconforto}
+
+       %\figura{scale=0.5}{formulario_pontosGeral.png}{Nuvem de palavras com os pontos de desconforto}{fig:pontosGeral}
+
+       \figura{scale=0.4}{formulario_pontosFardamento.png}{Nuvem de palavras com os pontos de desconforto indicados por fardamento}{fig:pontosFardamento}
+
+ 
+    \subsection{ Análise Qualitativa:}
+    As respostas abertas sobre os pontos de desconforto foram processadas em uma nuvem de palavras (Figura \ref{fig:descricaoFardamento}) para que fosse possível visualizar as palavras-chave mais recorrentes para cada fardamento.
+    \figura{scale=0.4}{formulario_descricaoFardamento.png}{Nuvem de palavras com as palavras-chave da descrição de desconforto indicados por fardamento}{fig:descricaoFardamento}
+
+\subsection{Conclusões}
+    A escrever
