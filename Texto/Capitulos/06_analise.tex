@@ -47,27 +47,27 @@ A Tabela \ref{tab:wilcoxon} apresenta os resultados para os movimentos que mostr
         \hline
         \textbf{Comparação} & \textbf{Estatística ($W$)} & \textbf{$p$-valor} \\
         \hline
-        Active Straight Leg Raise Direito (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
-        Active Straight Leg Raise Direito (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
-        Active Straight Leg Raise Direito (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Active Straight Leg Raise Direito (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+        Active Straight Leg Raise Direito (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+        Active Straight Leg Raise Direito (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
         Active Straight Leg Raise Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
         Active Straight Leg Raise Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
         Active Straight Leg Raise Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
-        Active Straight Leg Raise Esquerdo (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
-        Active Straight Leg Raise Esquerdo (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
-        Active Straight Leg Raise Esquerdo (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Active Straight Leg Raise Esquerdo (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+        Active Straight Leg Raise Esquerdo (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+        Active Straight Leg Raise Esquerdo (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
         Active Straight Leg Raise Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
         Active Straight Leg Raise Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
         Active Straight Leg Raise Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
-        Hurdle Step Direito (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
-        Hurdle Step Direito (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
-        Hurdle Step Direito (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Hurdle Step Direito (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+        Hurdle Step Direito (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+        Hurdle Step Direito (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
         Hurdle Step Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
         Hurdle Step Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
         Hurdle Step Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
-        Hurdle Step Esquerdo (FMS 5A vs FMS BASE) & 175.50 & 0.71500 \\
-        Hurdle Step Esquerdo (FMS 5A vs FMS MM) & 23.00 & 0.00006 \\
-        Hurdle Step Esquerdo (FMS 5A vs FMS MML) & 40.00 & 0.05983 \\
+        Hurdle Step Esquerdo (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+        Hurdle Step Esquerdo (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+        Hurdle Step Esquerdo (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
         Hurdle Step Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
         Hurdle Step Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
         Hurdle Step Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
@@ -85,13 +85,179 @@ Os testes estatísticos indicam que os fardamentos afetam significativamente o d
 \section{Dados de Temperatura}
 
 
-A escrever
+A análise dos dados de temperatura tem como objetivo descrever o comportamento térmico dos fardamentos analisados.
+
+\subsection{Análise Gráfica}
+Os gráficos das figuras \ref{fig:temp5a}, \ref{fig:tempMM}, \ref{fig:tempMML} e \ref{fig:tempgeral} foram montados
+a partir dos dados coletados pelo sistema desenvolvido para este trabalho. 
+
+O eixo X representa o tempo em segundos (s) do experimento, o eixo Y representa a variação de temperatura em graus Célsius (\degree C) para um 
+determinado sujeito utilizando um fardamento específico. A linha tracejada representa a 
+média de todas as leituras do mesmo uniforme. As linhas verticais representam as separações das etapas
+do experimento que sejam: 
+\begin{enumerate}[label=\Roman*.] % Usa números romanos maiúsculos
+    \item Estabilização inicial (0s a 120s)
+    \item Execução da atividade física (120s a 480s)
+    \item Estabilização final (480s a 600s)
+\end{enumerate}
+ 
+
+A fim de se avaliar a influência do sujeito na variação de temperatura em um determinado
+uniforme, para cada fardamento, individualmente, foi calculada a média dos valores de temperatura 
+dos sujeitos em cada instante de tempo, em seguida, o desvio padrão dos valores de temperatura 
+nesse instante, após isso, foi calculado o \acrlong{CV} para cada 
+momento da coleta conforme a equação \ref{eq:1}, por último foi calculada a média desses valores para cada uniforme.
 
 
+\begin{equation} \label{eq:1}CV=\frac{Desvio~Padr\tilde{a}o}{M\acute{e}dia}\end{equation}
+
+Além dessa análise, também foi realizada uma regressão linear para cada etapa do 
+experimento com o objetivo de se ter uma aproximação da taxa de variação da temperatura
+ a cada fase do ensaio.
+
+\subsubsection{Fardamento 5ºA}
+Para os dados coletados no experimento referentes ao fardamento 5ºA, foi gerado o gráfico da figura \ref{fig:temp5a} a seguir:
+
+    \figura{scale=0.5}{grafico_temp_5a.png}{Gráfico da variação de temperatura por tempo do fardamento 5ºA}{fig:temp5a}{L}
+
+A tabela \ref{tab:est5a} apresenta os valores máximos e mínimos de variação obtidos com este uniforme.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lccc}
+    \hline
+    Fardamento 5ºA & Variação máxima (\degree C) & Variação mínima (\degree C)\\ 
+    \hline
+    Virilha & 5.5 & 1.3 \\ 
+    Axila & 5.0 & 2.1 \\ 
+    \hline
+    \end{tabular}
+    \caption{Valores máximos e mínimos de variação da temperatura para o fardamento 5ºA}
+    \label{tab:est5a}
+    \end{table}
+
+O \acrlong{CV} calculado para o 5ºA foi de \textbf{42.2\%} para a região da virilha e \textbf{47.9\%} para a região da axila.
+
+Já suas taxas de variação de temperatura seguem a distribuição da tabela \ref{tab:taxa5a}:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lccc}
+    \hline
+    Fardamento 5ºA & I $(\degree C/min)$ & $II (\degree C/min)$ & $III (\degree C/min)$ \\ 
+    \hline
+    Virilha & 0.90 & 0.24 & 0.30 \\ 
+    Axila & 0.62 & 0.13 & 0.50 \\ 
+    \hline
+    \end{tabular}
+    \caption{Taxa de variação da temperatura para o fardamento 5ºA}
+    \label{tab:taxa5a}
+    \end{table}
+\subsubsection{Fardamento \acrlong{MM}}
+Para os dados coletados no experimento referentes ao fardamento \acrlong{MM}, foi gerado o gráfico da figura \ref{fig:tempMM} a seguir:
+
+    \figura{scale=0.5}{grafico_temp_MM.png}{Gráfico da variação de temperatura por tempo do fardamento \acrshort{MM}}{fig:tempMM}{L}
+
+A tabela \ref{tab:estMM} apresenta os valores máximos e mínimos de variação obtidos com este uniforme.
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{lccc}
+        \hline
+        Fardamento MM & Variação máxima (\degree C) & Variação mínima (\degree C)\\ 
+        \hline
+        Virilha & 3.8 & 1.2 \\ 
+        Axila & 4.5 & 0.8 \\ 
+        \hline
+        \end{tabular}
+        \caption{Valores máximos e mínimos de variação da temperatura para o fardamento \acrshort{MM}}
+        \label{tab:estMM}
+        \end{table}
+
+O \acrlong{CV} calculado para o \acrlong{MM} foi de \textbf{67.5\%} para ambas as regiões.
+
+Já suas taxas de variação de temperatura seguem a distribuição da tabela \ref{tab:taxaMM}:
+\begin{table}[h]
+        \centering
+        \begin{tabular}{lccc}
+        \hline
+        Fardamento MM & $I (\degree C/min)$ & $II (\degree C/min)$ & $III (\degree C/min)$ \\ 
+        \hline
+        Virilha & 0.49 & 0.17 & 0.20 \\ 
+        Axila & 0.34 & 0.26 & 0.15 \\ 
+        \hline
+        \end{tabular}
+        \caption{Taxa de variação da temperatura para o fardamento MM}
+        \label{tab:taxaMM}
+        \end{table}
+        
+\subsubsection{Fardamento \acrlong{MML}}
+Para os dados coletados no experimento referentes ao fardamento \acrlong{MML}, foi gerado o gráfico da figura \ref{fig:tempMML} a seguir:
+
+    \figura{scale=0.5}{grafico_temp_MML.png}{Gráfico da variação de temperatura por tempo do fardamento \acrshort{MML}}{fig:tempMML}{L}
+
+A tabela \ref{tab:estMML} apresenta os valores máximos e mínimos de variação obtidos com este uniforme.
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{lccc}
+        \hline
+        Fardamento MML & Variação máxima (\degree C) & Variação mínima (\degree C)\\ 
+        \hline
+        Virilha & 4.8 & 0.7 \\ 
+        Axila & 6.8 & 2.1 \\ 
+        \hline
+        \end{tabular}
+        \caption{Valores máximos e mínimos de variação da temperatura para o fardamento \acrshort{MML}}
+        \label{tab:estMML}
+        \end{table}
+
+    O \acrlong{CV} calculado para o \acrlong{MML} foi de \textbf{54.4\%} e \textbf{52.2\%} para a região da virilha e da axila, respectivamente.
+
+   Já suas taxas de variação de temperatura seguem a distribuição da tabela \ref{tab:taxaMML}:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lccc}
+    \hline
+    Fardamento MML & $I (\degree C/min)$ & $II (\degree C/min)$ & $III (\degree C/min)$ \\ 
+    \hline
+    Virilha & 0.59 & 0.12 & 0.39 \\ 
+    Axila & 0.64 & 0.33 & 0.64 \\ 
+    \hline
+    \end{tabular}
+    \caption{Taxa de variação da temperatura para o fardamento MML}
+    \label{tab:taxaMML}
+    \end{table}
+
+\subsection{Comparação Entre Fardamentos}
+Foi desenvolvido o gráfico da figura \ref{fig:tempgeral} com o objetivo de se comparar visualmente o
+ comportamento médio dos fardamentos.
+
+\figura{scale=0.5}{grafico_temp_geral.png}{Gráfico da variação média de temperatura por tempo}{fig:tempgeral}{L}
+
+Ao se comparar o \acrlong{CV} médio de cada uniforme, é possível verificar que o fardamento 5ºA apresenta 
+o menor coeficente, o que indica que dentre os três fardamentos testados, este é o que apresenta a menor 
+variabilidade em relação ao usuário e o \acrlong{MM} é o que apresenta uma maior variabilidade em relação 
+o usuário.
+
+Comparando os valores das variações máximas e mínimas de cada fardamento, bem como o valor máximo de variação 
+do comportamento médio, é possível perceber que o 
+
+Comparando os valores das taxas de variação de temperatura, é possível perceber que os uniformes 
+apresentam um comportamento semelhante, durante a estabilização inicial, há uma taxa elevada de 
+variação de temperatura, durante a execução do exercício, a taxa reduz significativamente e durante a 
+estabilização final, há um novo aumento da taxa de variação de temperatura.
+
+O comportamento do fardamento \acrshort{MM} na região da virilha seguiu o padrão visualizado, mas de uma forma 
+a se destacar em relação aos outros,  
+
+
+\subsection{Conclusões}
+A partir dos valores calculados de \acrlong{CV}, é possível notar que o fardamento 5ºA apresenta 
+o menor coeficiente, mostrando que 
 
 \section{Formulário de Percepção Subjetiva}
 A análise do formulário de percepção subjetiva tem como objetivo compreender as percepções dos participantes sobre o uso dos fardamentos avaliados. 
-
 
     \subsection{Análise Quantitativa:}
     \begin{itemize}
