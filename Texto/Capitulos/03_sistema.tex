@@ -1,14 +1,14 @@
-\chapter{Sistema para Captação dos Dados de Temperatura}
+\chapter{Sistema para Captação do Comportamento Térmico}
 A análise térmica de fardamentos operacionais é um fator essencial para avaliar o conforto e a segurança dos profissionais em ambientes desafiadores. Considerando a importância desse aspecto, este estudo desenvolveu um sistema de captação de dados de temperatura que permite monitorar e comparar o desempenho térmico de diferentes uniformes. A metodologia adotada envolveu a utilização de sensores de temperatura acoplados a dispositivos eletrônicos, garantindo a coleta sistemática e precisa das variações térmicas durante a atividade física dos participantes.
 
 
 \section{Arquitetura do Sistema}
 
-A norma ISO/IEC/IEEE 42010:2011 define "arquitetura" como os conceitos ou propriedades fundamentais de um sistema em seu ambiente e os princípios de seu design e evolução. A referência descreve que essas propriedades ou conceitos fundamentais devem estar incorporados nos elementos do sistema e em suas relações \cite{ISO42010}. Essa definição é orientada para enfatizar as características essenciais e as interações entre os componentes do sistema.
+A norma ISO/IEC/IEEE 42010:2011 define "arquitetura"~ como os conceitos ou propriedades fundamentais de um sistema em seu ambiente e os princípios de seu design e evolução. A referência descreve que essas propriedades ou conceitos fundamentais devem estar incorporados nos elementos do sistema e em suas relações \cite{ISO42010}. Essa definição é orientada para enfatizar as características essenciais e as interações entre os componentes do sistema.
 
 \subsection{Internet das Coisas}
 
-	A \acrlong{IoT}, do inglês Internet of things (\acrshort{IoT}), consiste na interconexão de dispositivos sensitivos e atuadores com a finalidade de atingir um
+	A \acrlong{IoT}, do inglês \textit{Internet of things} (\acrshort{IoT}), consiste na interconexão de dispositivos sensitivos e atuadores com a finalidade de atingir um
 	 objetivo em comum \cite{giusto2010internet} e tem como propósito primário permitir que humanos e máquinas compreendam melhor o ambiente que os envolve,
 	  usando as informações geradas por diversos dispositivos sensitivos, modificando a forma com que os usuários lidam com as tarefas do cotidiano \cite{atzori2010internet}.
 	
@@ -16,7 +16,7 @@ A norma ISO/IEC/IEEE 42010:2011 define "arquitetura" como os conceitos ou propri
 	 seu redor. A \acrshort{IoT} é reconhecida como uma das áreas mais importantes da tecnologia do futuro por enfatizar a interoperabilidade entre objetos e pessoas
 	  e pelo fato de poder ser implementada em diversos casos de uso, como por exemplo, automação predial, controle de processos produtivos e transporte inteligente \cite{gubbi2013internet}.
 	
-	  \tab No presente trabalho, foram utilizados os conceitos de \acrlong{IoT} para o desenvolvimento da arquitetura para coleta dos dados de temperatura
+	  \tab No presente trabalho, foram utilizados os conceitos de \acrlong{IoT} para o desenvolvimento da arquitetura para coleta dos dados do comportamento térmico
 	   dos fardamentos operacionais.
 
 \subsection{Dispositivo Sensitivo}
@@ -25,10 +25,13 @@ A norma ISO/IEC/IEEE 42010:2011 define "arquitetura" como os conceitos ou propri
 	 integrada Wi-Fi e Bluetooth. O dispositivo é projetado para operar como um coletor de dados, utilizando inicialmente dois sensores de temperatura modelo DS18B20,
 	  que oferecem alta precisão e confiabilidade na medição. O \acrshort{DS} apresenta flexibilidade para expansão, permitindo a adição de sensores adicionais conforme a
 	   necessidade, garantindo adaptabilidade ao sistema. O esquema de montagem segue o diagrama da Figura \ref{fig:diagramaDS}, tendo sido construídos para
-	    este trabalho duas unidades conforme a figura Y.
+	    este trabalho duas unidades conforme a figura.
 
 	\figura{scale=0.4}{esquema_DS.jpg}{Diagrama de montagem dos \acrlong{DS}}{fig:diagramaDS}
 
+\begin{centering}
+	[Adicionar Foto dos sensores]
+\end{centering}
 
 	\tab A comunicação com o servidor ocorre via protocolo \acrfull{MQTT}, uma solução leve e eficiente, ideal para aplicações de
 	 \acrlong{IoT}. Este protocolo assegura uma troca de mensagens ágil e segura entre o dispositivo e a infraestrutura central, 
@@ -37,7 +40,9 @@ A norma ISO/IEC/IEEE 42010:2011 define "arquitetura" como os conceitos ou propri
 	
 \section{Sistema para Coleta de Dados}
 
-	O sistema desenvolvido para coleta de dados de temperatura utiliza princípios da \acrlong{IoT}. O \acrlong{DS} se conecta a uma rede Wi-Fi disponível e uma vez conectado, esse dispositivo enviam mensagens via protocolo \acrshort{MQTT} para um servidor central. Esse servidor, por sua vez, executa um programa responsável por armazenar os conteúdos das mensagens em um banco de dados relacional, garantindo a organização e acessibilidade dos dados coletados. O diagrama da Figura \ref{fig:diagramaSis} representa uma visão simplificada da arquitetura do sistema de coleta de dados.
+	O sistema desenvolvido para coleta de dados de temperatura utiliza princípios da \acrlong{IoT}. 
+	O \acrlong{DS} se conecta a uma rede Wi-Fi disponível e uma vez conectado, esse dispositivo envia 
+	mensagens via protocolo \acrshort{MQTT} para um servidor central. Esse servidor, por sua vez, executa um programa responsável por armazenar os conteúdos das mensagens em um banco de dados relacional, garantindo a organização e acessibilidade dos dados coletados. O diagrama da Figura \ref{fig:diagramaSis} representa uma visão simplificada da arquitetura do sistema de coleta de dados.
 
     \figura{scale=0.4}{sistema_diagrama.png}{Diagrama simplificado da arquitetura do sistema de coleta de dados de temperatura}{fig:diagramaSis}
 
@@ -46,17 +51,24 @@ A norma ISO/IEC/IEEE 42010:2011 define "arquitetura" como os conceitos ou propri
 	
 	
 \section{Validação dos Dispositivos Sensitivos}
-    Para assegurar a confiabilidade dos dados coletados, os sensores foram submetidos a um processo rigoroso de validação em laboratório, sendo comparados com equipamentos de referência industrial. Durante os testes, foram aplicadas variações controladas de temperatura, permitindo analisar a precisão das medições e identificar possíveis desvios.
+    Para assegurar a confiabilidade dos dados coletados, os sensores foram submetidos a um processo 
+	rigoroso de validação em laboratório, sendo comparados com equipamentos de referência industrial. 
+	Durante os testes, foram aplicadas variações controladas de temperatura, permitindo analisar a 
+	precisão das medições e identificar possíveis desvios.
 
-	A validação dos dados coletados pelos sensores desenvolvidos foi realizada no Centro de Inovação e Pesquisa do \acrshort{CBMSC}, os \acrlong{DS}
-	 construídos foram posicionados junto a sensores industriais, pertencentes ao laboratório, os quais foram utilizados como referência. Esse procedimento, demonstrado pela Figura \ref{fig:experimento} teve como objetivo verificar a precisão, confiabilidade e correlação das medições obtidas pelos sensores desenvolvidos em relação aos equipamentos de padrão industrial.
-	\figura{scale=0.5}{validacao_1.jpg}{Montagem do experimento em laboratório}{fig:experimento}
-	\tab Inicialmente, foi aguardado um período de estabilização térmica do sistema, garantindo que os sensores estivessem em condições homogêneas de medição. Após essa fase, foram realizadas variações controladas de temperatura, utilizando água aquecida para elevar a temperatura do ambiente e gelo para provocar reduções térmicas. Durante esse processo, as medições de temperatura dos sensores construídos foram registradas e comparadas com os valores obtidos pelos sensores industriais conforme a Figura \ref{fig:comparacao}.
+	A validação dos dados coletados pelos sensores desenvolvidos foi realizada no Centro de Inovação 
+	e Pesquisa do \acrshort{CBMSC}, os dispositivos sensitivos
+	 construídos foram posicionados junto a sensores industriais, pertencentes ao laboratório, os 
+	 quais foram utilizados como referência. Esse procedimento, demonstrado pela Figura 
+	 \ref{fig:experimento} teve como objetivo verificar a precisão, confiabilidade e correlação das 
+	 medições obtidas pelos sensores desenvolvidos em relação aos equipamentos de padrão industrial.
+	
+	 \figura{scale=0.37}{validacao_1.jpg}{Montagem do experimento em laboratório}{fig:experimento}
+	
+	Inicialmente, foi aguardado um período de estabilização térmica do sistema, garantindo que os sensores estivessem em condições homogêneas de medição. Após essa fase, foram realizadas variações controladas de temperatura, utilizando água aquecida para elevar a temperatura do ambiente e gelo para provocar reduções térmicas. Durante esse processo, as medições de temperatura dos sensores construídos foram registradas e comparadas com os valores obtidos pelos sensores industriais conforme a Figura \ref{fig:comparacao}.
 	
     
     \figura{scale=0.5}{validacao_comparacao.png}{Comparação entre os valores obtidos pelos dispositivos construídos e sensores de referência}{fig:comparacao}
-
-	
 
 
 	\subsection{Analíses Quantitativas}
@@ -66,35 +78,43 @@ A norma ISO/IEC/IEEE 42010:2011 define "arquitetura" como os conceitos ou propri
 
 	\begin{itemize}
 		\item  Erro Médio Absoluto (MAE - Mean Absolute Error)
+		\end{itemize}
 		\tab O \acrshort{MAE} foi utilizado para medir a diferença absoluta média entre os valores dos sensores desenvolvidos e os valores de referência. Quanto menor o \acrshort{MAE}, maior a precisão do sensor.
 			\begin{itemize}
 				\item \acrshort{DS} 1: \acrshort{MAE} para temperatura (valor A) = 0,998°C e (valor V) = 1,327°C.
 				\item \acrshort{DS} 2: \acrshort{MAE} para temperatura (valor A) = 1,109°C e (valor V) = 1,204°C.
 			\end{itemize}
 		\indent Os valores de erro absoluto indicam uma boa proximidade das medições em relação às referências.
-
+	\begin{itemize}
 		\item Erro Médio Percentual Absoluto (MAPE - Mean Absolute Percentage Error)
+		\end{itemize}
 		\tab O \acrshort{MAPE} avalia o erro relativo das medições em relação à referência, permitindo uma comparação percentual.
 		\begin{itemize}
 			\item \acrshort{DS} 1: \acrshort{MAPE} para temperatura (valor A) = 3,55\% e (valor V) = 4,35\%.
 			\item \acrshort{DS} 2: \acrshort{MAPE} para temperatura (valor A) = 3,76\% e (valor V) = 3,74\%.
 		\end{itemize}
 		\indent Ambos os dispositivos apresentam erros percentuais abaixo de 5\%, o que indica que os sensores construídos apresentam precisão aceitável para o objetivo do trabalho.
-		
+	\begin{itemize}	
 		\item Coeficiente de Correlação de Pearson
+		\end{itemize}
 		\tab O coeficiente de correlação de Pearson foi utilizado para medir a relação linear entre as temperaturas registradas pelos sensores desenvolvidos e os sensores de referência.
 		\begin{itemize}
 			\item \acrshort{DS} 1: Correlação de valores de temperatura (valor A) = 0,982 e (valor V) = 0,976.
 			\item \acrshort{DS} 2: Correlação de valores de temperatura (valor A) = 0,980 e (valor V) = 0,975.
 		\end{itemize}
-		\indent Ambos os \acrshort{DS} apresentam valores próximos de 1,0 o que indica correlação extremamente forte, demonstrando que os sensores seguem a mesma tendência dos sensores de referência.
-
-		\item Distribuição de Erros\\
-		A distribuição dos erros foi analisada para verificar se os desvios apresentavam padrões sistemáticos ou aleatórios. Os histogramas, mostrados na Figura \ref{fig:erro} demonstraram que os erros estavam concentrados próximos de zero, confirmando a baixa variabilidade e a alta precisão dos dispositivos construídos.
-
-        \figura{scale=0.45}{validacao_erro.png}{Histogramas de distribuição de erros}{fig:erro}
-
+		\indent Ambos os \acrshort{DS} apresentam valores próximos de 1,0 o que indica correlação 
+		extremamente forte, demonstrando que os sensores seguem a mesma tendência dos sensores de 
+		referência.
+	\begin{itemize}	
+		\item Distribuição de Erros
 	\end{itemize}
+		A distribuição dos erros foi analisada para verificar se os desvios apresentavam padrões 
+		sistemáticos ou aleatórios. Os histogramas, mostrados na Figura \ref{fig:erro} 
+		demonstraram que os erros estavam concentrados próximos de zero, confirmando a baixa variabilidade e a alta precisão dos dispositivos construídos.
+
+        \figura{scale=0.5}{validacao_erro.png}{Histogramas de distribuição de erros}{fig:erro}
+
+	
 
 \subsection{Conclusões da Validação dos Dispositivos Sensitivos}
 	Os resultados obtidos demonstram que os dispositivos desenvolvidos possuem alta precisão e confiabilidade, apresentando erros absolutos pequenos e correlações extremamente fortes com os sensores de referência. 
