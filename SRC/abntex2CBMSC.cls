@@ -1308,8 +1308,8 @@ de Bombeiros Militar de Santa Catarina.}
     \vspace*{\fill}
     %\hspace{.45\textwidth}
     \begin{flushleft}
-        Monografia apresentada como pré-requisito para conclusão do \cursoCompleto
-do \imprimirinstituicao.
+        Monografia apresentada como pré-requisito para conclusão do \cursoCompleto~do 
+        \imprimirinstituicao.
 \end{flushleft}
     
     %\vspace*{\fill}
