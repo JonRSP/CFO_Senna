@@ -2,7 +2,7 @@
 
 \section{\textit{Functional Movement Screen}}
 
-    Em relação aos dados obtidos nos testes análise estatística dos dados obtidos nos testes do \acrlong{FMS} realizados sob diferentes condições de fardamento. Foram aplicados testes estatísticos não paramétricos adequados para amostras pequenas e dados discretos, como o \textbf{teste de Friedman} e o \textbf{teste de Wilcoxon}, para identificar diferenças significativas entre as condições.
+    Em relação aos dados obtidos nos testes análise estatística dos dados obtidos nos testes do \acrlong{FMS} realizados sob diferentes condições de fardamento. Foram aplicados testes estatísticos não paramétricos adequados para amostras pequenas e dados discretos, como o \textbf{teste de Friedman} e o \textbf{teste de Wilcoxon}, para identificar diferenças significativas entre as condições \cite{azevedo2018metodos}.
 
     \subsection{Teste de Friedman}
         O teste de Friedman é um teste estatístico não paramétrico utilizado para comparar três ou mais condições de medidas repetidas \cite{sheldon1996use}. Ele verifica se há diferenças estatisticamente significativas entre os fardamentos em relação ao desempenho nos testes de FMS.
@@ -12,6 +12,12 @@
             \item $H_0$: Não há diferenças entre os fardamentos.
             \item $H_1$: Pelo menos um fardamento apresenta diferenças estatisticamente significativas.
             \end{itemize}
+        
+            O $p$-valor calculado para cada teste representa a probabilidade de se obter um resultado 
+            igual ou mais extremo do que o observado, assumindo que a hipótese nula ($H_0$) seja verdadeira. 
+            O $p$-valor indica a evidência contra a hipótese nula: valores pequenos (geralmente 
+            abaixo de 0,05) sugerem que a hipótese nula deve ser rejeitada, apontando para a existência de um 
+            efeito significativo.
 
         A Tabela \ref{tab:friedman} apresenta os valores da estatística do teste de Friedman ($\chi^2_F$) e os respectivos \textit{p-valores}.
 
@@ -23,21 +29,21 @@
                 \hline
                 \textbf{Movimento} & \textbf{Estatística ($\chi^2_F$)} & \textbf{$p$-valor} \\
                 \hline
-                Active Straight Leg Raise Direito  & 10.317 & 0.016  \\
-                Active Straight Leg Raise Esquerdo &  8.032 & 0.045  \\
-                Deep Squat                        &  4.000 & 0.261  \\
-                Hurdle Step Direito               & 13.047 & 0.004  \\
-                Hurdle Step Esquerdo              &  9.621 & 0.022  \\
+                \textit{Active Straight Leg Raise} Direito  & 10.317 & 0.016  \\
+                \textit{Active Straight Leg Raise} Esquerdo &  8.032 & 0.045  \\
+                \textit{Deep Squat}                        &  4.000 & 0.261  \\
+                \textit{Hurdle Step} Direito               & 13.047 & 0.004  \\
+                \textit{Hurdle Step} Esquerdo              &  9.621 & 0.022  \\
                 \hline
             \end{tabular}
             \end{table}
 
-        Os resultados indicam que há diferenças estatisticamente significativas ($p < 0.05$) para os seguintes testes: \textbf{Active Straight Leg Raise Direito e Esquerdo}, \textbf{Hurdle Step Direito e Esquerdo}. Já os outros testes não apresentaram diferenças significativas entre os fardamentos.
+        Os resultados indicam que há diferenças estatisticamente significativas ($p < 0.05$) para os seguintes testes: \textbf{\textit{Active Straight Leg Raise} Direito e Esquerdo}, \textbf{\textit{Hurdle Step} Direito e Esquerdo}. Já os outros testes não apresentaram diferenças significativas entre os fardamentos.
 
     \subsection{Teste de Wilcoxon para Comparações Pareadas}
-        Para determinar quais fardamentos diferem entre si, foi aplicado o teste de Wilcoxon para comparações pareadas entre os fardamentos. Este teste verifica diferenças entre duas condições específicas, sendo uma alternativa ao teste \textit{t de Student} pareado quando os dados não seguem distribuição normal \cite{hilton1996appropriateness}.
+        Para determinar quais fardamentos diferem entre si, foi aplicado o teste de Wilcoxon para comparações pareadas entre os fardamentos. Este teste verifica diferenças entre duas condições específicas, sendo uma alternativa ao teste \textit{t de Student} pareado quando os dados não seguem distribuição normal \cite{azevedo2018metodos}.
 
-        A Tabela \ref{tab:wilcoxon} apresenta os resultados para os movimentos que mostraram diferenças significativas no teste de Friedman.
+        A Tabela \ref{tab:wilcoxon} apresenta os resultados do teste de Wilcoxon para os movimentos que mostraram diferenças significativas no teste de Friedman.
 
         \begin{table}[H]
             \centering
@@ -47,40 +53,40 @@
                 \hline
                 \textbf{Comparação} & \textbf{Estatística ($W$)} & \textbf{$p$-valor} \\
                 \hline
-                Active Straight Leg Raise Direito (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
-                Active Straight Leg Raise Direito (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
-                Active Straight Leg Raise Direito (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
-                Active Straight Leg Raise Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
-                Active Straight Leg Raise Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
-                Active Straight Leg Raise Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
-                Active Straight Leg Raise Esquerdo (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
-                Active Straight Leg Raise Esquerdo (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
-                Active Straight Leg Raise Esquerdo (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
-                Active Straight Leg Raise Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
-                Active Straight Leg Raise Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
-                Active Straight Leg Raise Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
-                Hurdle Step Direito (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
-                Hurdle Step Direito (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
-                Hurdle Step Direito (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
-                Hurdle Step Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
-                Hurdle Step Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
-                Hurdle Step Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
-                Hurdle Step Esquerdo (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
-                Hurdle Step Esquerdo (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
-                Hurdle Step Esquerdo (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
-                Hurdle Step Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
-                Hurdle Step Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
-                Hurdle Step Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+                \textit{Active Straight Leg Raise} Direito (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+                \textit{Active Straight Leg Raise} Direito (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+                \textit{Active Straight Leg Raise} Direito (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
+                \textit{Active Straight Leg Raise} Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+                \textit{Active Straight Leg Raise} Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+                \textit{Active Straight Leg Raise} Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+                \textit{Active Straight Leg Raise} Esquerdo (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+                \textit{Active Straight Leg Raise} Esquerdo (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+                \textit{Active Straight Leg Raise} Esquerdo (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
+                \textit{Active Straight Leg Raise} Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+                \textit{Active Straight Leg Raise} Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+                \textit{Active Straight Leg Raise} Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+                \textit{Hurdle Step} Direito (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+                \textit{Hurdle Step} Direito (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+                \textit{Hurdle Step} Direito (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
+                \textit{Hurdle Step} Direito (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+                \textit{Hurdle Step} Direito (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+                \textit{Hurdle Step} Direito (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
+                \textit{Hurdle Step} Esquerdo (FMS 5ºA vs FMS BASE) & 175.50 & 0.71500 \\
+                \textit{Hurdle Step} Esquerdo (FMS 5ºA vs FMS MM) & 23.00 & 0.00006 \\
+                \textit{Hurdle Step} Esquerdo (FMS 5ºA vs FMS MML) & 40.00 & 0.05983 \\
+                \textit{Hurdle Step} Esquerdo (FMS BASE vs FMS MM) & 148.50 & 0.00086 \\
+                \textit{Hurdle Step} Esquerdo (FMS BASE vs FMS MML) & 96.00 & 0.04771 \\
+                \textit{Hurdle Step} Esquerdo (FMS MM vs FMS MML) & 104.00 & 0.02347 \\
                 \hline
             \end{tabular}
             \end{table}
 
         Os resultados do teste de Wilcoxon mostram que o fardamento \acrlong{MM} impactou negativamente o desempenho no movimento Active Straight Leg Raise, pois apresentou diferenças significativas em relação à linha de base ($p = 0.00086$) e ao fardamento 5ºA ($p = 0.00006$). O fardamento \acrlong{MML} também influenciou esse movimento, mas com menor impacto ($p = 0.04772$).
 
-    \subsection{Conclusões}
+    \subsection{Resumo}
         Os testes estatísticos indicam que os fardamentos podem afetar significativamente o desempenho 
-        em alguns movimentos do \acrshort{FMS}, especialmente no \textbf{Active Straight Leg Raise} e no \textbf{Hurdle 
-        Step}. Os principais achados são descritos a seguir:
+        em alguns movimentos do \acrshort{FMS}, especialmente no \textit{\textbf{Active Straight Leg Raise}} e no \textit{\textbf{Hurdle 
+        Step}}. Os principais achados são descritos a seguir:
         
         \begin{enumerate}[label=\Roman*.] % Usa números romanos maiúsculos
             \item O 5ºA apresentou os resultados mais próximos à linha de base, não atrapalhando a 
@@ -96,7 +102,8 @@
         mobilidade de membros inferiores.
 
 \section{Comportamento Térmico}
-    A análise dos dados de temperatura tem como objetivo descrever o comportamento térmico dos fardamentos analisados.
+    A análise dos dados de temperatura tem como objetivo descrever o comportamento térmico 
+    dos fardamentos testados.
 
     \subsection{Análise Gráfica}
         Os gráficos das figuras \ref{fig:temp5a}, \ref{fig:tempMM}, \ref{fig:tempMML} e \ref{fig:tempgeral} foram montados
@@ -299,26 +306,26 @@
         O fardamento \acrshort{MM} apresenta, no geral, a melhor taxa de variação de temperatura 
         dos três uniformes testados.
 
-    \subsection{Conclusões}
+    \subsection{Resumo}
         A análise dos dados térmicos revelou diferenças significativas no comportamento dos 
         fardamentos testados. Os principais achados são descritos a seguir:
         
         \begin{enumerate}[label=\Roman*.] % Usa números romanos maiúsculos
             \item O \acrshort{EPI} \acrlong{MM} apresentou os melhores resultados médios em termos de 
             comportamento térmico, apesar de possuir o maior \acrlong{CV}, sugerindo maior dependência 
-            sobre a fisiologia do usuário.
+            sobre a fisiologia do militar.
             \item O 5ºA demonstrou comportamento térmico intermediário, apresentando uma variação de 
             temperatura elevada em sua parte inferior e menor variação em sua parte superior, mas por 
             ter apresentado o menor \acrlong{CV} de toda a amostra, se destaca positivamente por ter 
             um comportamento mais estável.
-            \item O \acrshort{EPI} \acrlong{MML} apresentou o pior comportamento térmico considerando os 
-            três fardamentos testados, apresentando uma variação de temperatura menor em 
+            \item O \acrshort{EPI} \acrlong{MML} apresentou o pior comportamento térmico considerando o 
+            teste realizado, apresentando uma variação de temperatura menor em 
             sua parte inferior e maior variação em sua parte superior, além de 
             ter apresentado um \acrlong{CV} intermediário.
             \end{enumerate}   
         
         A redução das taxas de variação de temperatura durante a execução da atividade física, 
-        pode ser explicada pelo fluxo de ar gerada durante a movimentação, resfriando o fardamento.
+        pode ser explicada pelo fluxo de ar gerado durante a movimentação, resfriando o fardamento.
 
         O desempenho positivo da parte inferior do fardamento \acrshort{MM} pode ser explicado pela 
         diferença em seu design, a utilização de suspensórios ao invés do uso do cinto permite um maior 
@@ -380,7 +387,7 @@
         As descrições de percepção subjetiva reforçam que o peso e a flexibilidade do uniforme foram 
         fatores determinantes no conforto percebido pelos usuários. O fardamento \textbf{\acrlong{MML}} foi 
         frequentemente associado a maior liberdade de movimento.
-    \subsection{Conclusões}
+    \subsection{Resumo}
     A análise subjetiva dos participantes permitiu identificar padrões de conforto e incômodo entre 
     os fardamentos testados. Os principais achados são:
 
