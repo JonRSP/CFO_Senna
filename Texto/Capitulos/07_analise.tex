@@ -5,7 +5,17 @@
     Em relação aos dados obtidos nos testes análise estatística dos dados obtidos nos testes do \acrlong{FMS} realizados sob diferentes condições de fardamento. Foram aplicados testes estatísticos não paramétricos adequados para amostras pequenas e dados discretos, como o \textbf{teste de Friedman} e o \textbf{teste de Wilcoxon}, para identificar diferenças significativas entre as condições \cite{azevedo2018metodos}.
 
     \subsection{Teste de Friedman}
-        O teste de Friedman é um teste estatístico não paramétrico utilizado para comparar três ou mais condições de medidas repetidas \cite{sheldon1996use}. Ele verifica se há diferenças estatisticamente significativas entre os fardamentos em relação ao desempenho nos testes de FMS.
+        O teste de Friedman é um teste estatístico não paramétrico utilizado para comparar três ou mais condições de medidas repetidas \cite{sheldon1996use}, 
+        conforme Equação \ref{eq:friedman}, onde 
+    $N$ é o número de sujeitos,
+    $k$ é o número de tipos de fardamento comparados e
+    $R_j$ é a soma dos \textit{ranks} para o fardamento $j$ no teste FMS. Ele verifica se há diferenças estatisticamente significativas entre 
+        os fardamentos em relação ao desempenho nos testes de FMS.
+
+\begin{equation}
+\chi_F^2 = \left[ \frac{12}{Nk(k+1)} \sum_{j=1}^{k} R_j^2 \right] - 3N(k+1)
+\label{eq:friedman}
+\end{equation}
 
         A hipótese testada é:
         \begin{itemize}
@@ -41,7 +51,14 @@
         Os resultados indicam que há diferenças estatisticamente significativas ($p < 0.05$) para os seguintes testes: \textbf{\textit{Active Straight Leg Raise} Direito e Esquerdo}, \textbf{\textit{Hurdle Step} Direito e Esquerdo}. Já os outros testes não apresentaram diferenças significativas entre os fardamentos.
 
     \subsection{Teste de Wilcoxon para Comparações Pareadas}
-        Para determinar quais fardamentos diferem entre si, foi aplicado o teste de Wilcoxon para comparações pareadas entre os fardamentos. Este teste verifica diferenças entre duas condições específicas, sendo uma alternativa ao teste \textit{t de Student} pareado quando os dados não seguem distribuição normal \cite{azevedo2018metodos}.
+        Para determinar quais fardamentos diferem entre si, foi aplicado o teste de Wilcoxon para 
+        comparações pareadas entre os fardamentos. O teste foi aplicado conforme a Equação \ref{eq:wilcoxon}, onde $d_i = x_i - y_i$ são as diferenças pareadas e $R(|d_i|)$ são os ranks das diferenças absolutas. 
+        Esta ferramenta verifica diferenças entre duas condições específicas, sendo uma alternativa ao teste \textit{t de Student} pareado quando os dados não seguem distribuição normal \cite{azevedo2018metodos}.
+
+    \begin{equation}
+    W^- = \sum_{d_i < 0} R(|d_i|) + \frac{1}{2} \sum_{d_i = 0} R(|d_i|)
+    \label{eq:wilcoxon}
+    \end{equation}
 
         A Tabela \ref{tab:wilcoxon} apresenta os resultados do teste de Wilcoxon para os movimentos que mostraram diferenças significativas no teste de Friedman.
 
@@ -137,7 +154,7 @@
             Os dados coletados referentes ao fardamento 5ºA estão representados na Figura \ref{fig:temp5a}. 
             A tabela \ref{tab:est5a} presenta os valores máximos e mínimos de variação obtidos:
 
-            \figura{scale=0.5}{grafico_temp_5a.png}{Gráfico da variação de temperatura por tempo do fardamento 5ºA}{fig:temp5a}{L}
+            \figura{scale=0.5}{grafico_temp_5a.png}{Gráfico da variação de temperatura por tempo do fardamento 5ºA}{fig:temp5a}{L}{do autor (2025)}
 
 
             \begin{table}[H]
@@ -176,7 +193,7 @@
             A tabela \ref{tab:estMM} presenta os valores máximos e mínimos de variação obtidos:
 
 
-            \figura{scale=0.5}{grafico_temp_MM.png}{Gráfico da variação de temperatura por tempo do fardamento \acrshort{MM}}{fig:tempMM}{L}
+            \figura{scale=0.5}{grafico_temp_MM.png}{Gráfico da variação de temperatura por tempo do fardamento \acrshort{MM}}{fig:tempMM}{L}{do autor (2025)}
 
 
             \begin{table}[H]
@@ -213,7 +230,7 @@
             Os dados coletados referentes ao fardamento \acrlong{MML} estão representados na Figura \ref{fig:tempMML}. 
             A tabela \ref{tab:estMML} presenta os valores máximos e mínimos de variação obtidos:
 
-            \figura{scale=0.5}{grafico_temp_MML.png}{Gráfico da variação de temperatura por tempo do fardamento \acrshort{MML}}{fig:tempMML}{L}
+            \figura{scale=0.5}{grafico_temp_MML.png}{Gráfico da variação de temperatura por tempo do fardamento \acrshort{MML}}{fig:tempMML}{L}{do autor (2025)}
 
             \begin{table}[H]
                 \centering
@@ -251,7 +268,7 @@
         fardamentos analisados e a tabela \ref{tab:maxmedia} apresenta os valores da variação total de 
         temperatura da média para cada uniforme.
 
-        \figura{scale=0.5}{grafico_temp_geral.png}{Gráfico da variação média de temperatura por tempo}{fig:tempgeral}{L}
+        \figura{scale=0.5}{grafico_temp_geral.png}{Gráfico da variação média de temperatura por tempo}{fig:tempgeral}{L}{do autor (2025)}
 
         \begin{table}[H]
             \centering
@@ -379,10 +396,10 @@
         dos participantes. 
         
         \figura{scale=0.5}{grafico_desconforto.png}{Pontos de desconforto indicados por fardamento}
-        {fig:desconforto}
+        {fig:desconforto}{}{do autor (2025)}
 
         \figura{scale=0.4}{formulario_descricaoFardamento.png}{Nuvem de palavras com as palavras-chave da descrição de desconforto indicados por fardamento}
-        {fig:descricaoFardamento}
+        {fig:descricaoFardamento}{}{do autor (2025)}
 
         As descrições de percepção subjetiva reforçam que o peso e a flexibilidade do uniforme foram 
         fatores determinantes no conforto percebido pelos usuários. O fardamento \textbf{\acrlong{MML}} foi 
