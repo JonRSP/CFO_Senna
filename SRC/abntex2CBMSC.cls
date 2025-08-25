@@ -1587,7 +1587,7 @@ Fonte: #1.
 \IfFileExists{anexos.tex}{%
   \begin{anexosenv}
 
-% Imprime uma página indicando o início dos apêndices
+% Imprime uma página indicando o início dos anexos
 \partanexos
 \input{anexos.tex}
 \end{anexosenv}
